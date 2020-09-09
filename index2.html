@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>Arduino Modules</title>
+		<header class="header">KY-010 PHOTO INTERRUPTER MODULE</header>
+	</head>
+<body>
+	<table>
+	<td><img src="3.png" width="400" height="350"></td>
+	</table>
+	
+	<table class="table1">
+	<td><img src="4.png" width="500" height="350"></td>
+	</table>
+	
+	<table class="table2">
+	<tr>
+		<td>
+		THe KY-010 Photo Interrupter module consists of an optical emitter/detector 
+		in the front and two resistors (1 kΩ and 33 Ω) in the back. 
+		The sensor uses a beam of light between de emitter an detector to check 
+		if the path between both is being blocked by an opaque object.
+		</td>
+	</tr>
+	</table>
+	
+		<table class="table3">
+	<tr>
+		<td>
+			<h1>Code</h1>
+	int Led = 13; // define LED pin </br>
+	int buttonpin = 3; // define photo interrupter signal pin</br>
+	int val; //define a numeric variable</br>
+</br>
+	void setup()</br>
+	{</br>
+	pinMode(Led, OUTPUT); // LED pin as output</br>
+	pinMode(buttonpin, INPUT); //photo interrupter pin as input</br>
+	}</br>
+</br>
+	void loop()</br>
+	{</br>
+	val=digitalRead(buttonpin); //read the value of the sensor </br>
+	if(val == HIGH) // turn on LED when sensor is blocked </br>
+	{</br>
+		digitalWrite(Led,HIGH);</br>
+	}</br>
+	else</br>
+	{</br>
+		digitalWrite(Led,LOW);</br>
+	}</br>
+	}</br>
+		</td>
+	</tr>
+	</table>
+	<table class="table4">
+	<tr>
+	<td>
+		<a href="https://arduinomodules.info/ky-010-photo-interrupter-module/">Source</a>
+	</td>
+	</tr>
+	</table>
+</body>
+</html>
